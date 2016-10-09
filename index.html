@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Verto Homes</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
   </head>
@@ -15,7 +17,16 @@
   				<img src = "assets/large-v.png" alt="Verto logo">
   				<span class = "bold">VERTO</span> HOMES
   			</div>
-  			<div class = "nav_menu">
+
+        <div class = "mobile-header">
+          <div id="burger-menu" onclick="showMobNav()">
+            <div id="burger-layer-one"></div>
+            <div id="burger-layer-two"></div>
+            <div id="burger-layer-three"></div>
+          </div>
+          <div class = "clear"></div>
+        </div>
+  			<div id="hide_mob_nav" class = "nav_menu">
   				<ul>
   					<li>About</li>
   					<li>Home Automation</li>
@@ -148,6 +159,20 @@
   		</div>
   	</footer>
 
+  <script>
+  function showMobNav() {
+    var el = document.getElementById("hide_mob_nav");
+
+    if ( el.style.display != "block") {
+        el.style.display = "block";
+    } 
+
+    else {
+      el.style.display = "none";
+    }
+  }
+
+  </script>  
 
   </body>
 </html>

@@ -48,8 +48,8 @@
 
   .custom1.column { width: 20%; }
   .custom2.column { width: 20%; padding-top: 58px;}
-  .custom3.column { width: 28%; }
-  .custom4.column { width: 20%; }        
+  .custom3.column { width: 26%; }
+  .custom4.column { width: 22%; }        
 
 }
 
@@ -63,6 +63,8 @@
   content: "";
   display: table;
   clear: both; }
+
+
 
 /* END OF GRID */
 
@@ -118,10 +120,53 @@ header {
   width: 6%;
 }
 
+/* Burger Menu -----*/
+
+#burger-menu {
+  padding: 17px 16px 17px 0;
+  float: right;
+}
+
+#burger-menu:hover * {
+  background-color: #ddd;
+}
+
+#burger-layer-one, #burger-layer-two, #burger-layer-three {
+  width: 18px;
+  height: 3px;
+  background-color: #fff;
+  margin: 0 0 3px 0;
+  transition: all 0.8s;
+}
+
+#burger-layer-three {
+  margin: 0;
+}
+
+/* END Burger Menu ---*/
+
+
 .nav_menu {
+  display: none;
   color: #eee;
   font-size: 0.8rem;
   padding-right: 60px;
+}
+
+.mobile-header {
+  padding-right: 60px;
+}
+
+@media (min-width: 1000px) {
+
+  .nav_menu {
+    display: block;
+  }
+
+  .mobile-header {
+    display: none;
+  }
+
 }
 
 .bold {
@@ -134,12 +179,26 @@ header {
 
 ul {
   list-style: none;
-  float: right;
+  font-size: 20px;
 }
 
 li {
-  float: right;
-  padding-right: 10px;
+   padding-right: 10px;
+   padding-bottom: 10px;
+}
+
+@media (min-width: 1000px) {
+
+  ul {
+    float: right;
+    font-size: 0.8rem;
+  }
+
+  li {
+    float: right;
+    padding-bottom: 0;
+  }
+
 }
 
 p {
@@ -253,6 +312,10 @@ footer {
 footer p {
   padding: 0;
   margin: 0 0 10px 0;
+}
+
+footer .custom4 img {
+  width: 100%;
 }
 
 .read-more {
